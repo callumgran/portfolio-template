@@ -1,0 +1,99 @@
+---
+title: 'Example Project: Clean template'
+date: '2025-12-12'
+description: 'A crisp one-paragraph summary of what the project is, who it’s for, and what you learned.'
+tags: ['Next.js', 'TypeScript', 'shadcn/ui']
+url: 'https://example.com'
+---
+
+<Callout title="At a glance">
+  **What:** A small portfolio template with projects + blog.
+
+**Why:** To publish a CV site quickly with minimal customization.
+
+**Result:** A clean, MDX-driven site you can deploy in minutes.
+
+</Callout>
+
+## Overview
+
+Write 2–4 sentences explaining the project in plain language.
+
+- What does it do?
+- Who is it for?
+- What makes it interesting?
+
+<Card title="Links">
+  - Live demo: https://example.com - Source:
+  https://github.com/your-handle/your-repo
+</Card>
+
+---
+
+## My role
+
+A quick list is usually enough:
+
+- Built the core pages and content pipeline
+- Designed a minimal component set (shadcn/ui)
+- Set up MDX content structure for posts and projects
+
+---
+
+## Problem → approach
+
+### The problem
+
+Describe the constraint in 1 paragraph (time, scope, performance, UX, etc.).
+
+### The approach
+
+Describe how you tackled it. Keep it concrete:
+
+- Chose Next.js App Router for simple routing
+- Used frontmatter + MDX for content
+- Added a typed config so users update one file
+
+---
+
+## Technical highlights
+
+Pick 2–4 bullets that show depth.
+
+- **Content model:** frontmatter fields like `title`, `date`, `description`, `tags`.
+- **Render pipeline:** `next-mdx-remote/rsc` + custom MDX components.
+- **Safety:** slug validation + path traversal protection.
+
+<Card title="Example snippet">
+
+```ts
+// A good “highlight” snippet shows something real and small.
+// e.g. a typed config or helper used across the site.
+export const siteConfig = {
+  features: { blog: true, projects: true },
+};
+```
+
+</Card>
+
+---
+
+## Outcome
+
+What changed because you built this?
+
+- A measurable result (speed, adoption, users), **or**
+- A clear before/after (complexity reduced, time saved), **or**
+- A learning outcome (what you’d do differently next time)
+
+---
+
+## What I’d improve next
+
+Keep it honest and short:
+
+- Add project thumbnails
+- Add a small “featured” flag to pin projects
+- Generate a table of contents for longer writeups
+
+<CtaButton href="/projects">Back to projects</CtaButton>
