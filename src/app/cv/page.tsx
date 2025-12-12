@@ -32,7 +32,7 @@ export default function CvPage() {
 
       <iframe
         title="CV preview"
-        src={pdfPath}
+        src={withBasePath(pdfPath)}
         className="h-[78vh] w-full bg-background"
       />
     </PageShell>

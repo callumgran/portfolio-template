@@ -33,15 +33,15 @@ export const getNotFoundMdx = async (): Promise<{
       primaryCta:
         data.primaryCta && typeof data.primaryCta === 'object'
           ? {
-              label: String((data.primaryCta as any).label ?? 'Go home'),
-              href: String((data.primaryCta as any).href ?? '/'),
+              label: String(data.primaryCta.label ?? 'Go home'),
+              href: String(data.primaryCta.href ?? '/'),
             }
           : undefined,
       secondaryCta:
         data.secondaryCta && typeof data.secondaryCta === 'object'
           ? {
-              label: String((data.secondaryCta as any).label ?? 'Blog'),
-              href: String((data.secondaryCta as any).href ?? '/blog'),
+              label: String(data.secondaryCta.label ?? 'Blog'),
+              href: String(data.secondaryCta.href ?? '/blog'),
             }
           : undefined,
     };
