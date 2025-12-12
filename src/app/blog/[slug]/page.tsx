@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 
@@ -46,19 +45,6 @@ export default async function BlogPostPage({ params }: PageProps) {
     <PageShell>
       <h1 className="text-3xl font-semibold">{meta.title}</h1>
       <div className="mt-1 text-sm opacity-70">{meta.date}</div>
-
-      {meta.image ? (
-        <div className="mt-6 overflow-hidden rounded-xl border">
-          <Image
-            src={meta.image}
-            alt={meta.title}
-            width={1200}
-            height={630}
-            className="h-auto w-full"
-            priority
-          />
-        </div>
-      ) : null}
 
       <article className="prose dark:prose-invert max-w-none mt-6">
         <MDXRemote source={content} components={mdxComponents} />

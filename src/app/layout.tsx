@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'CV Template',
-  description: 'A minimal CV/portfolio template with blog + projects.',
+  title: 'Portfolio Template',
+  description: 'A minimal portfolio website template with blog + projects.',
 };
 
 export default function RootLayout({
