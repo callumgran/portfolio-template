@@ -97,7 +97,7 @@ export const mdxComponents: MDXComponents = {
     children: React.ReactNode;
   }) => (
     <Button asChild className="my-4">
-      <a href={href}>{children}</a>
+      <a href={withBasePath(href)}>{children}</a>
     </Button>
   ),
 };
