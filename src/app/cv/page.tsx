@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { PageShell } from '@/components/site/page-shell';
 import { siteConfig } from '@/config/site';
+import { withBasePath } from '@/lib/base-path';
 
 export default function CvPage() {
   const pdfPath = siteConfig.cv.pdfPath;
@@ -17,12 +18,12 @@ export default function CvPage() {
 
         <div className="flex flex-wrap gap-2">
           <Button asChild>
-            <a href={pdfPath} target="_blank" rel="noreferrer">
+            <a href={withBasePath(pdfPath)} target="_blank" rel="noreferrer">
               Open
             </a>
           </Button>
           <Button asChild variant="outline">
-            <a href={pdfPath} download>
+            <a href={withBasePath(pdfPath)} download>
               Download
             </a>
           </Button>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { withBasePath } from '@/lib/base-path';
 
 export const mdxComponents: MDXComponents = {
   a: ({ href, children, ...props }) => {
@@ -72,7 +73,7 @@ export const mdxComponents: MDXComponents = {
     <figure className="my-6">
       <div className="overflow-hidden rounded-xl border">
         <Image
-          src={src}
+          src={withBasePath(src)}
           alt={alt}
           width={width}
           height={height}

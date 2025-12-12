@@ -8,6 +8,7 @@ import { mdxComponents } from '@/components/mdx-components';
 import { siteConfig } from '@/config/site';
 import { getAllPosts, getAllProjects } from '@/lib/content';
 import { getHomeAboutMdx, getHomeSkills } from '@/lib/home-content';
+import { withBasePath } from '@/lib/base-path';
 
 export default async function HomePage() {
   const [posts, projects, aboutMdx, skills] = await Promise.all([
@@ -27,7 +28,7 @@ export default async function HomePage() {
           <Avatar className="size-24 md:size-32">
             {siteConfig.profileImage ? (
               <AvatarImage
-                src={siteConfig.profileImage}
+                src={withBasePath(siteConfig.profileImage)}
                 alt={siteConfig.name}
               />
             ) : null}

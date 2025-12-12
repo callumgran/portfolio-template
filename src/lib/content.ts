@@ -8,8 +8,6 @@ export type PostMeta = {
   date: string; // ISO, e.g. "2025-12-12"
   description?: string;
   tags?: string[];
-  /** Optional cover image path under /public (e.g. '/posts/my-post.jpg'). */
-  image?: string;
 };
 
 export type ProjectMeta = {
@@ -83,7 +81,6 @@ export const getAllPosts = async (): Promise<PostMeta[]> => {
         date: String(data.date ?? '1970-01-01'),
         description: data.description ? String(data.description) : undefined,
         tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
-        image: data.image ? String(data.image) : undefined,
       } satisfies PostMeta;
     })
   );
@@ -106,7 +103,6 @@ export const getPostBySlug = async (
       date: String(data.date ?? '1970-01-01'),
       description: data.description ? String(data.description) : undefined,
       tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
-      image: data.image ? String(data.image) : undefined,
     },
     content,
   };
