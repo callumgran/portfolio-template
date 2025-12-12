@@ -12,7 +12,6 @@ export type NotFoundMeta = {
   headline?: string;
   description?: string;
   primaryCta?: NotFoundCta;
-  secondaryCta?: NotFoundCta;
 };
 
 const NOT_FOUND_DIR = path.join(process.cwd(), 'content', 'not-found');
@@ -35,13 +34,6 @@ export const getNotFoundMdx = async (): Promise<{
           ? {
               label: String(data.primaryCta.label ?? 'Go home'),
               href: String(data.primaryCta.href ?? '/'),
-            }
-          : undefined,
-      secondaryCta:
-        data.secondaryCta && typeof data.secondaryCta === 'object'
-          ? {
-              label: String(data.secondaryCta.label ?? 'Blog'),
-              href: String(data.secondaryCta.href ?? '/blog'),
             }
           : undefined,
     };
