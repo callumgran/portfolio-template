@@ -52,7 +52,8 @@ export const getNotFoundMdx = async (): Promise<{
       meta: {
         title: '404',
         headline: 'Page not found',
-        description: "The page you’re looking for doesn’t exist (or was moved).",
+        description:
+          'The page you’re looking for doesn’t exist (or was moved).',
         primaryCta: { label: 'Go home', href: '/' },
       },
       content:

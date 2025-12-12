@@ -12,7 +12,8 @@ export default async function NotFound() {
   const title = meta.title ?? '404';
   const headline = meta.headline ?? 'Page not found';
   const description =
-    meta.description ?? "The page you’re looking for doesn’t exist (or was moved).";
+    meta.description ??
+    'The page you’re looking for doesn’t exist (or was moved).';
 
   const primary = meta.primaryCta ?? { label: 'Go home', href: '/' };
 
